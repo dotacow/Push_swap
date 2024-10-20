@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/20 13:22:10 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/10/20 19:15:29 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,20 @@ static char	**parsestr(int	size, char	**argv)
 	return (split);
 
 }
-intstack	*getlist(int argc, char **argv)
+t_list	*getlist(int argc, char **argv)
 {
 	char	**strs;
 	int		size;
 	int		i;
-	intstack	*stack;
+	t_list	*stack;
 
 	size = argc - 1;
 	strs = parsestr(size, argv + 1);
 	i = 0;
 	while (strs[i])
 	{
-		stack->num = ft_atoi(strs[i]);
-		
+		stack->content = ft_atoi(strs[i]);
+
 		i++;
 		stack = stack->next;
 	}
