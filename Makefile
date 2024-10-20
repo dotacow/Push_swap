@@ -3,17 +3,16 @@ CFLAGS = -Wall -Wextra -Werror
 SRC = push_swap.c #more files TBD.
 OFILES = $(SRC:.c=.o)
 LIBDIR = libft
-NAME = libftprintf.a
+NAME = push_swap.out
 LIB = $(LIBDIR)/libft.a
 
 all: $(NAME)
 
-$(NAME): $(OFILES) $(LIB)
-	ar rcs $(NAME) $(OFILES)
+$(NAME): $(SRC) $(LIB)
+	$(CC) $(CFLAGS) $(SRC) -L$(LIBDIR) -lft -o $(NAME)
 
 $(LIB):
 	make -C $(LIBDIR)
-	cp $(LIB) $(NAME)
 
 clean:
 	rm -f $(OFILES)
