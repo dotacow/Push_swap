@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_dlstsize.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 11:45:39 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/20 19:33:19 by yokitane         ###   ########.fr       */
+/*   Created: 2024/10/20 20:43:33 by yokitane          #+#    #+#             */
+/*   Updated: 2024/10/20 20:47:00 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../push_swap.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_dlstsize(t_dlist *lst)
 {
-	t_list	*list;
+	int		count;
+	t_dlist	*current;
 
-	list = malloc(sizeof(t_list));
-	if (!list)
-		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	list->prev = NULL;
-	return (list);
+	count = 0;
+	current = lst;
+	while (current != NULL)
+	{
+		count++;
+		current = current->next;
+	}
+	return (count);
 }

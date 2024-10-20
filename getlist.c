@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   getlist.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/20 19:15:29 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/10/20 20:48:28 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
 
-#include	<stdlib.h>
-
-static char	strjoin(int size, char **strs, char *sep)
+static char	*strjoin(int size, char **strs, char *sep)
 {
 	char	*s;
 	int		i;
@@ -39,37 +38,34 @@ static char	strjoin(int size, char **strs, char *sep)
 	s[c] = '\0';
 	return (s);
 }
-static char	**parsestr(int	size, char	**argv)
+
+static char	**parsestr(int size, char **argv)
 {
 	char	*joined;
 	char	**split;
 
-	joined = strjoin(size, argv, ' ');
+	joined = strjoin(size, argv, " ");
 	if (!joined)
 		return (NULL);
 	split = ft_split(joined, ' ');
-	free (joined);
+	free(joined);
 	if (!split)
 		return (NULL);
 	return (split);
-
 }
+
 t_list	*getlist(int argc, char **argv)
 {
 	char	**strs;
-	int		size;
 	int		i;
 	t_list	*stack;
 
-	size = argc - 1;
-	strs = parsestr(size, argv + 1);
+	strs = parsestr(argc--, argv + 1);
 	i = 0;
 	while (strs[i])
 	{
 		stack->content = ft_atoi(strs[i]);
-
 		i++;
 		stack = stack->next;
 	}
-
 }

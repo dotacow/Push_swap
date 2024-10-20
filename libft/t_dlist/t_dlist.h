@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   t_dlist.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/07 11:45:39 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/20 19:33:19 by yokitane         ###   ########.fr       */
+/*   Created: 2024/10/20 20:02:14 by yokitane          #+#    #+#             */
+/*   Updated: 2024/10/20 20:09:14 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef T_DLIST_H
+# define T_DLIST_H
 
-t_list	*ft_lstnew(void *content)
+typedef struct s_dlist
 {
-	t_list	*list;
+	int				num;
+	struct s_dlist	*next;
+	struct s_dlist	*prev;
+}				t_dlist;
 
-	list = malloc(sizeof(t_list));
-	if (!list)
-		return (NULL);
-	list->content = content;
-	list->next = NULL;
-	list->prev = NULL;
-	return (list);
-}
+#endif

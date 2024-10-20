@@ -1,6 +1,6 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = push_swap.c #more files TBD.
+SRC = getlist.c push_swap.c #more files TBD.
 OFILES = $(SRC:.c=.o)
 LIBDIR = libft
 NAME = push_swap.out
