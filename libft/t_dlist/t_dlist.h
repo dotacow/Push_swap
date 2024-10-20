@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 20:02:14 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/20 20:09:14 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/20 20:57:09 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,15 @@ typedef struct s_dlist
 	int				num;
 	struct s_dlist	*next;
 	struct s_dlist	*prev;
-}				t_dlist;
+}					t_dlist;
+
+void		ft_dlstadd_back(t_dlist **lst, t_dlist *new);
+void		ft_dlstadd_front(t_dlist **lst, t_dlist *new);
+void		ft_dlstclear(t_dlist **lst, void (*del)(void *));
+void		ft_dlstdelone(t_dlist *lst, void (*del)(void *));
+void		ft_dlstiter(t_dlist *lst, void (*f)(void *));
+t_dlist		*ft_dlstmap(t_dlist *lst, void *(*f)(void *), void (*del)(void *));
+t_dlist		*ft_dlstnew(void *content);
+int			ft_dlstsize(t_dlist *lst);
 
 #endif

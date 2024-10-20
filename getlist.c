@@ -6,12 +6,11 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/20 20:48:28 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/20 20:51:01 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdlib.h>
 
 static char	*strjoin(int size, char **strs, char *sep)
 {
