@@ -6,11 +6,11 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 20:43:33 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/20 20:47:00 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/21 11:28:22 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../libft.h"
 
 int	ft_dlstsize(t_dlist *lst)
 {
