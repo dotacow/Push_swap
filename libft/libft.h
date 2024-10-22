@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:21:56 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/21 16:41:37 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/22 17:56:09 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include "t_dlist/t_dlist.h"
+# include "../push_swap.h"
 # include "get_next_line.h"
 # include <fcntl.h>
 # include <stdarg.h>
@@ -21,8 +22,6 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "../push_swap.h"
-
 
 typedef struct s_list
 {
