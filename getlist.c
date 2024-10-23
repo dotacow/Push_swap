@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/21 16:42:36 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/23 18:10:59 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,19 +53,21 @@ static char	**parsestr(int size, char **argv)
 	return (split);
 }
 
-t_dlist	*getlist(int argc, char **argv)
+t_list	*getlist(int argc, char **argv)
 {
 	char	**strs;
+	int		size;
 	int		i;
-	t_dlist	*stack;
+	t_list	*head;
+	t_list *temp;
 
-	strs = parsestr(--argc, argv + 1);
+	size = argc - 1;
+	strs = parsestr(size, argv + 1);
 	i = 0;
-	while (strs[i])
+	while(strs[i])
 	{
-		stack->num = ft_atoi(strs[i]);
+		temp->num = atoi(strs[i]);
 		i++;
-		stack = stack->next;
-	} // this loop is just a place holder
-	return (stack);
+	}
+
 }

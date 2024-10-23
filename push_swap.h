@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/20 20:55:13 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/23 18:07:36 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 
 # include "libft/libft.h"
 
-t_dlist	*getlist(int argc, char **argv);
+typedef struct s_stack
+{
+	t_list	*head;
+	t_list	tail;
+} t_stack;
+
+t_list	*getlist(int argc, char **argv);
 
 #endif

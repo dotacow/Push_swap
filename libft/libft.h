@@ -6,14 +6,13 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:21:56 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/22 17:56:09 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/23 11:01:46 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "t_dlist/t_dlist.h"
 # include "../push_swap.h"
 # include "get_next_line.h"
 # include <fcntl.h>
@@ -25,9 +24,8 @@
 
 typedef struct s_list
 {
-	void			*content;
+	int		num;
 	struct s_list	*next;
-	struct s_list	*prev;
 }					t_list;
 
 t_list				*ft_lstnew(void *content);

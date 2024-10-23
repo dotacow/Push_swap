@@ -6,15 +6,13 @@
 #    By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/20 20:19:28 by yokitane          #+#    #+#              #
-#    Updated: 2024/10/21 19:12:47 by yokitane         ###   ########.fr        #
+#    Updated: 2024/10/23 11:03:39 by yokitane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TLSTPATH =t_dlist
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = $(TLSTPATH)/ft_dlstsize.c $(TLSTPATH)/ft_dlstiter.c $(TLSTPATH)/ft_dlstadd_back.c $(TLSTPATH)/ft_dlstadd_front.c $(TLSTPATH)/ft_dlstclear.c $(TLSTPATH)/ft_dlstdelone.c $(TLSTPATH)/ft_dlstnew.c\
-get_next_line_utils.c get_next_line.c \
+SRC = get_next_line_utils.c get_next_line.c \
 ft_putnbr_fd_lower.c ft_putadd_fd.c ft_printf.c \
 ft_putnbr_fd.c ft_putendl_fd.c ft_putchar_fd.c ft_putstr_fd.c ft_striteri.c ft_strmapi.c ft_itoa.c ft_split.c ft_strtrim.c ft_strjoin.c ft_substr.c ft_strdup.c ft_calloc.c ft_atoi.c ft_strnstr.c ft_memcmp.c ft_memchr.c ft_strncmp.c ft_strrchr.c ft_strchr.c ft_toupper.c ft_tolower.c ft_strlcpy.c ft_strlcat.c ft_memmove.c ft_memcpy.c ft_bzero.c ft_memset.c ft_strlen.c ft_isprint.c ft_isascii.c ft_isalnum.c ft_isdigit.c ft_isalpha.c
 BONUSC = ft_lstmap_bonus.c ft_lstiter_bonus.c ft_lstclear_bonus.c ft_lstdelone_bonus.c ft_lstadd_back_bonus.c ft_lstlast_bonus.c ft_lstsize_bonus.c ft_lstadd_front_bonus.c ft_lstnew_bonus.c
