@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 12:38:25 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/20 20:48:09 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/09/01 12:57:22 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len1 = ft_strlen(s1);
 	len2 = ft_strlen(s2);
-	str = malloc(len1 + len2 + 1);
+	str = malloc (len1 + len2 + 1);
 	if (!str)
 		return (NULL);
 	i = 0;

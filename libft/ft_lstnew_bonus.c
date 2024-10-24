@@ -6,13 +6,13 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 11:45:39 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/20 19:33:19 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/24 18:25:42 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstnew(int content)
 {
 	t_list	*list;
 
@@ -21,6 +21,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	list->content = content;
 	list->next = NULL;
-	list->prev = NULL;
 	return (list);
 }

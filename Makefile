@@ -12,7 +12,7 @@ $(NAME): $(SRC) $(LIB)
 	$(CC) $(CFLAGS) $(SRC) -L$(LIBDIR) -lft -o $(NAME)
 
 $(LIB):
-	make -C $(LIBDIR)
+	make bonus -C $(LIBDIR)
 
 clean:
 	rm -f $(OFILES)
