@@ -6,11 +6,12 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/26 11:40:59 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/26 13:57:12 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
+
 
 static char	*strjoin(int size, char **strs, char *sep)
 {
@@ -56,44 +57,26 @@ static char	**parsestr(int size, char **argv)
 t_list	**getlist(int argc, char **argv)
 {
 	char	**strs;
-	int		size;
-	int		i;
-	t_list	**head;
-	t_list	*temp;
+	int	i;
+	t_ilist	**head;
+	t_ilist	*temp;
 
-	size = argc - 1;
-	strs = parsestr(size, argv + 1);
+	strs = parsestr(--argc, argv + 1);
 	if (!strs || checkinvalid(strs)) // check for dups/invalid, if found, free all and return NULL
-	{
-		free(strs);
-		return (NULL);
-	}
-	head = malloc(sizeof(t_list *));
-	if (!head)
-	{
-		free(strs);
-		return (NULL);
-	}
-	i = 1;
-	*head = ft_ilstnew(ft_atoi(strs[0]));
-	if (!*head)
-	{
-		free(head);
-		free(strs);
-		return (NULL);
-	}
+		return (free(strs), NULL);
+	i = 0;
 	while (strs[i])
 	{
 		temp = ft_ilstnew(ft_atoi(strs[i]));
+		if (i == 0)
+			*head = temp;
 		if (!temp)
 		{
 			ft_ilstclear(head, free);
-			free(strs);
-			return (NULL);
+			return (free(strs), NULL);
 		}
 		ft_ilstadd_back(head, temp);
 		i++;
 	}
-	free(strs);
-	return (head);
+	return (free(strs), head);
 }
