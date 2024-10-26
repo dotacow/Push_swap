@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:21:56 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/24 18:52:32 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/26 10:55:27 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,15 @@
 
 typedef struct s_list
 {
-	int			content;
+	void		*content;
 	struct s_list	*next;
 }	t_list;
+
+typedef struct s_ilist
+{
+	int				num;
+	struct s_ilist	*next;
+}	t_ilist;
 
 t_list	*ft_lstnew(int content);
 t_list	*ft_lstlast(t_list *lst);

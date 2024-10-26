@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/24 20:06:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/26 11:17:53 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,18 @@ t_list	*getlist(int argc, char **argv)
 	i = 0;
 	while(strs[i])
 	{
-		temp = ft_lstnew(ft_atoi(strs[i]));
+		temp = ft_ilstnew(ft_atoi(strs[i]));
+		if (!temp)
+		{
+			ft_ilstclear(head, free);
+			free(strs);
+			return (NULL);
+		}
 		i++;
 	}	//loop over strs begin
-		// create new node using lstnew
+			// create new node using lstnew
 		//lst add back.
+		//check for dups, if found, free all and return NULL
+		//free strs
+		//return head
 }
