@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/26 11:17:53 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/26 11:40:59 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static char	**parsestr(int size, char **argv)
 	return (split);
 }
 
-t_list	*getlist(int argc, char **argv)
+t_list	**getlist(int argc, char **argv)
 {
 	char	**strs;
 	int		size;
@@ -63,8 +63,26 @@ t_list	*getlist(int argc, char **argv)
 
 	size = argc - 1;
 	strs = parsestr(size, argv + 1);
-	i = 0;
-	while(strs[i])
+	if (!strs || checkinvalid(strs)) // check for dups/invalid, if found, free all and return NULL
+	{
+		free(strs);
+		return (NULL);
+	}
+	head = malloc(sizeof(t_list *));
+	if (!head)
+	{
+		free(strs);
+		return (NULL);
+	}
+	i = 1;
+	*head = ft_ilstnew(ft_atoi(strs[0]));
+	if (!*head)
+	{
+		free(head);
+		free(strs);
+		return (NULL);
+	}
+	while (strs[i])
 	{
 		temp = ft_ilstnew(ft_atoi(strs[i]));
 		if (!temp)
@@ -73,11 +91,9 @@ t_list	*getlist(int argc, char **argv)
 			free(strs);
 			return (NULL);
 		}
+		ft_ilstadd_back(head, temp);
 		i++;
-	}	//loop over strs begin
-			// create new node using lstnew
-		//lst add back.
-		//check for dups, if found, free all and return NULL
-		//free strs
-		//return head
+	}
+	free(strs);
+	return (head);
 }
