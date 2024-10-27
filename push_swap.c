@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/27 18:19:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 18:36:56 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ int	main(int argc, char **argv)
 		return (0);
 	stack_a = getlist(argc, argv);
 	if (!stack_a)
-		return (0);
+	{
+		write(2, "Error\n", 6);
+		return (1);
+	}
 	ft_ilstprint(*stack_a);
 	// b = NULL;
 	// sort(a, b);

@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/27 18:07:21 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 18:32:36 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	ft_ilstadd_back(t_ilist **lst, t_ilist *new)
 	}
 	last = ft_ilstlast(lst);
 	last->next = new;
+	new->next = NULL;
 }
 void	ft_ilstclear(t_ilist **lst)
 {

@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/27 18:23:49 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 18:31:48 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@ static int	checkinvalid(char **strs)
 		while (strs[i][j])
 		{
 			if (!ft_isdigit(strs[i][j]))
-				if (strs[i][j] != '-' || strs[i][j] != '+')
+				if (strs[i][j] != '-' && strs[i][j] != '+')
 					return (1);
 			j++;
 		}
+		i++;
 	}
 	return (0);
 }
