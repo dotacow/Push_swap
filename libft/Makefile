@@ -15,7 +15,7 @@ bonus : $(OFILES) $(BONUSO)
 	ar rcs $(NAME) $(OFILES) $(BONUSO)
 
 clean:
-	rm -f $(OFILES) $(BONUSO)
+	rm -f $(OFILES)
 
 fclean: clean
 	rm -f $(NAME)

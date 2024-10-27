@@ -6,11 +6,11 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/27 17:58:03 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 18:23:49 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "push_swap.h"
 
 static int	checkinvalid(char **strs)
 {
@@ -24,7 +24,7 @@ static int	checkinvalid(char **strs)
 		while (strs[i][j])
 		{
 			if (!ft_isdigit(strs[i][j]))
-				if (strs[i][j] != '-' || strs[i][j] != '+'))
+				if (strs[i][j] != '-' || strs[i][j] != '+')
 					return (1);
 			j++;
 		}
@@ -92,7 +92,7 @@ static char	**parsestr(int size, char **argv)
 	return (split);
 }
 
-t_list	**getlist(int argc, char **argv)
+t_ilist	**getlist(int argc, char **argv)
 {
 	char	**strs;
 	int	i;
@@ -103,6 +103,7 @@ t_list	**getlist(int argc, char **argv)
 	if (!strs || checkinvalid(strs) || checkdup(strs))
 		return (free(strs), NULL);
 	i = 0;
+	head = malloc(sizeof(t_ilist *));
 	while (strs[i])
 	{
 		temp = ft_ilstnew(ft_atoi(strs[i]));

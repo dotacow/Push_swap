@@ -6,11 +6,11 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/27 17:58:23 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 18:07:21 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft/libft.h"
+#include "push_swap.h"
 
 t_ilist	*ft_ilstnew(int content)
 {
@@ -55,5 +55,14 @@ void	ft_ilstclear(t_ilist **lst)
 		tmp = (*lst)->next;
 		free(*lst);
 		*lst = tmp;
+	}
+	*lst = NULL;
+}
+void	ft_ilstprint(t_ilist *lst)
+{
+	while (lst)
+	{
+		printf("%d\n", lst->num);
+		lst = lst->next;
 	}
 }

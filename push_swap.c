@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/26 13:53:27 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 18:19:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,18 @@
 // store input in stack
 // build the sa,sb,sss,ra,rb,rr,rra,rrb,rrr'
 // work on algorithim
-int	main(void)
+int	main(int argc, char **argv)
 {
-	
+	t_ilist	**stack_a;
+	// t_ilist	**b;
+
+	if (argc == 1)
+		return (0);
+	stack_a = getlist(argc, argv);
+	if (!stack_a)
+		return (0);
+	ft_ilstprint(*stack_a);
+	// b = NULL;
+	// sort(a, b);
+	return (0);
 }
