@@ -6,12 +6,50 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/26 13:57:12 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 17:43:56 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft/libft.h"
 
+static int	checkinvalid(char **strs)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (strs[i])
+	{
+		j = 0;
+		while (strs[i][j])
+		{
+			if (!ft_isdigit(strs[i][j]))
+				if (strs[i][j] != '-' || strs[i][j] != '+'))
+					return (1);
+			j++;
+		}
+	}
+	return (0);
+}
+static int	checkdup(char **strs)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (strs[i])
+	{
+		j = i + 1;
+		while (strs[j])
+		{
+			if (!ft_strncmp(strs[i], strs[j], 11))
+				return (1);
+			j++;
+		}
+		i++;
+	}
+	return (0);
+}
 
 static char	*strjoin(int size, char **strs, char *sep)
 {
@@ -62,7 +100,7 @@ t_list	**getlist(int argc, char **argv)
 	t_ilist	*temp;
 
 	strs = parsestr(--argc, argv + 1);
-	if (!strs || checkinvalid(strs)) // check for dups/invalid, if found, free all and return NULL
+	if (!strs || checkinvalid(strs) || checkdup(strs)) // check for dups/invalid, if found, free all and return NULL
 		return (free(strs), NULL);
 	i = 0;
 	while (strs[i])
