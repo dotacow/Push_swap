@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/27 19:49:05 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 20:29:26 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,20 +51,7 @@ static int	checkdup(char **strs)
 	}
 	return (0);
 }
-static int	get_len(int size, char **strs, char *sep)
-{
-	int	len;
-	int	i = 0;
 
-	while (i < size)
-	{
-		len += ft_strlen(strs[i]);
-		if (i < size - 1)
-			len += ft_strlen(sep);
-		i++;
-	}
-	return (len);
-}
 static char	*strjoin(int size, char **strs, char *sep)
 {
 	char	*s;
@@ -72,7 +59,9 @@ static char	*strjoin(int size, char **strs, char *sep)
 	int		j;
 	int		k;
 
-	j = get_len(size, strs, sep);
+	j = 0;
+	i = 0;
+	j = ft_getlen(size, strs, sep);
 	if (!((s = malloc (j + 1))))
 		return (NULL);
 	k = 0;
@@ -90,7 +79,7 @@ static char	*strjoin(int size, char **strs, char *sep)
 		}
 		i++;
 	}
-	return (s[k] = 0 , s);
+	return (s[k] = 0, s);
 }
 
 static char	**parsestr(int size, char **argv)
