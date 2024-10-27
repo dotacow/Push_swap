@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/27 18:31:48 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 19:20:16 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,25 +57,35 @@ static char	*strjoin(int size, char **strs, char *sep)
 	char	*s;
 	int		i;
 	int		j;
-	int		c;
+	int		k;
 
-	s = malloc(sizeof(strs));
-	if (!s)
-		return (NULL);
+	j = 0;
 	i = 0;
-	c = 0;
+	while (i < size)
+	{
+		j += ft_strlen(strs[i]);
+		if (i < size - 1)
+			j += ft_strlen(sep);
+		i++;
+	}
+	if (!((s = malloc (j + 1))))
+		return (NULL);
+	k = 0;
+	i = 0;
 	while (i < size)
 	{
 		j = 0;
 		while (strs[i][j])
-			s[c++] = strs[i][j++];
-		j = 0;
-		while (sep[j] && i != size - 1)
-			s[c++] = sep[j++];
+			s[k++] = strs[i][j++];
+		if (i < size - 1)
+		{
+			j = 0;
+			while (sep[j])
+				s[k++] = sep[j++];
+		}
 		i++;
 	}
-	s[c] = '\0';
-	return (s);
+	return (s[k] = 0, s);
 }
 
 static char	**parsestr(int size, char **argv)
