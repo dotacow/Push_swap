@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/27 17:43:56 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/27 17:58:03 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static int	checkdup(char **strs)
 		j = i + 1;
 		while (strs[j])
 		{
-			if (!ft_strncmp(strs[i], strs[j], 11))
+			if (ft_strncmp(strs[i], strs[j], 11) == 0)
 				return (1);
 			j++;
 		}
@@ -100,7 +100,7 @@ t_list	**getlist(int argc, char **argv)
 	t_ilist	*temp;
 
 	strs = parsestr(--argc, argv + 1);
-	if (!strs || checkinvalid(strs) || checkdup(strs)) // check for dups/invalid, if found, free all and return NULL
+	if (!strs || checkinvalid(strs) || checkdup(strs))
 		return (free(strs), NULL);
 	i = 0;
 	while (strs[i])
@@ -110,7 +110,7 @@ t_list	**getlist(int argc, char **argv)
 			*head = temp;
 		if (!temp)
 		{
-			ft_ilstclear(head, free);
+			ft_ilstclear(head);
 			return (free(strs), NULL);
 		}
 		ft_ilstadd_back(head, temp);
