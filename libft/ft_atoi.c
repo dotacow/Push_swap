@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 11:53:34 by yokitane          #+#    #+#             */
-/*   Updated: 2024/08/31 12:22:25 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/28 13:37:14 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	sign;
-	int	num;
-	int	i;
+	long int	sign;
+	long int	num;
+	long int	i;
 
 	i = 0;
 	num = 0;

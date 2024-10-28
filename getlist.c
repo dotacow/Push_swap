@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/28 12:00:44 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/28 13:56:12 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,19 +37,40 @@ static int	checkdup(char **strs)
 {
 	int	i;
 	int	j;
+	long int	num[501];
 
+	i = 0;
+	while(i < 501)
+		num[i++] = 0;
+	i = 0;
+	while (strs[i])
+	{
+		num[i] = ft_atoi(strs[i]);
+		i++;
+	}
 	i = 0;
 	while (strs[i])
 	{
 		j = i + 1;
 		while (strs[j])
 		{
-			if (ft_strncmp(strs[i], strs[j], 11) == 0)
+			if (num[i] == num[j] || num[j] > __INT_MAX__ || num[j] < -2147483648)
 				return (1);
 			j++;
 		}
 		i++;
 	}
+	// while (strs[i])
+	// {
+	// 	j = i + 1;
+	// 	while (strs[j])
+	// 	{
+	// 		if (ft_strncmp(strs[i], strs[j], 11) == 0)
+	// 			return (1);
+	// 		j++;
+	// 	}
+	// 	i++;
+	// }
 	return (0);
 }
 
