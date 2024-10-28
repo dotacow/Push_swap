@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/28 17:22:59 by yokitane         ###   ########.fr       */
+/*   Created: 2024/10/28 17:23:49 by yokitane          #+#    #+#             */
+/*   Updated: 2024/10/28 17:35:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-# include "libft/libft.h"
+void	ft_free(char **words)
+{
+	int	i;
 
-t_ilist	**getlist(int argc, char **argv);
-t_ilist	*ft_ilstnew(int content);
-t_ilist	*ft_ilstlast(t_ilist **lst);
-void	ft_ilstadd_back(t_ilist **lst, t_ilist *new);
-void	ft_ilstclear(t_ilist **lst);
-void	ft_ilstprint(t_ilist *lst);
-void	ft_free(char **words);
-
-#endif
+	i = 0;
+	while (words[i])
+	{
+		free (words[i]);
+		i++;
+	}
+	free (words);
+}

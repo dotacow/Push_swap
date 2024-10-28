@@ -6,13 +6,13 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/01 16:28:24 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/28 15:57:57 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:20:04 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_free(char **words, size_t reserved)
+static void	ft_free(char **words, size_t reserved)
 {
 	size_t	i;
 

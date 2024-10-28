@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/28 16:24:15 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:18:04 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ t_ilist	**getlist(int argc, char **argv)
 
 	strs = parsestr(--argc, argv + 1);
 	if (!strs || checkinvalid(strs) || checkdup(strs))
-		return (free(strs), NULL);
+		return (ft_free(strs), NULL);
 	i = 0;
 	head = malloc(sizeof(t_ilist *));
 	if (!head)
@@ -124,9 +124,9 @@ t_ilist	**getlist(int argc, char **argv)
 		if (i == 0)
 			*head = temp;
 		if (!temp)
-			return (ft_ilstclear(head), ft_free(strs, i), NULL);
+			return (ft_ilstclear(head), ft_free(strs), NULL);
 		ft_ilstadd_back(head, temp);
 		i++;
 	}
-	return (ft_free(strs, i), head);
+	return (ft_free(strs), head);
 }
