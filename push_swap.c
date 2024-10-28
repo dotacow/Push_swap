@@ -19,8 +19,8 @@
 int	main(int argc, char **argv)
 {
 	t_ilist	**stack_a;
-	// t_ilist	**b;
 
+	// t_ilist	**b;
 	if (argc == 1)
 		return (0);
 	stack_a = getlist(argc, argv);

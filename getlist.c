@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/27 20:33:29 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:00:44 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static int	checkinvalid(char **strs)
 	}
 	return (0);
 }
+
 static int	checkdup(char **strs)
 {
 	int	i;
@@ -60,7 +61,8 @@ static char	*strjoin(int size, char **strs, char *sep)
 	int		k;
 
 	j = ft_getlen(size, strs, sep);
-	if (!((s = malloc (j + 1))))
+	s = malloc(j + 1);
+	if (!s)
 		return (NULL);
 	k = 0;
 	i = 0;
@@ -98,7 +100,7 @@ static char	**parsestr(int size, char **argv)
 t_ilist	**getlist(int argc, char **argv)
 {
 	char	**strs;
-	int	i;
+	int		i;
 	t_ilist	**head;
 	t_ilist	*temp;
 
@@ -107,16 +109,15 @@ t_ilist	**getlist(int argc, char **argv)
 		return (free(strs), NULL);
 	i = 0;
 	head = malloc(sizeof(t_ilist *));
+	if (!head)
+		return (NULL);
 	while (strs[i])
 	{
 		temp = ft_ilstnew(ft_atoi(strs[i]));
 		if (i == 0)
 			*head = temp;
 		if (!temp)
-		{
-			ft_ilstclear(head);
-			return (free(strs), NULL);
-		}
+			return (ft_ilstclear(head), free(strs), NULL);
 		ft_ilstadd_back(head, temp);
 		i++;
 	}

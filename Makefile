@@ -8,8 +8,8 @@ LIB = $(LIBDIR)/libft.a
 
 all: $(NAME)
 
-$(NAME): $(SRC) $(LIB)
-	$(CC) $(CFLAGS) $(SRC) -L$(LIBDIR) -lft -o $(NAME)
+$(NAME): $(OFILES) $(LIB)
+	$(CC) $(OFILES) -L$(LIBDIR) -lft -o $(NAME)
 
 $(LIB):
 	make -C $(LIBDIR)
