@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/28 15:59:03 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/28 16:03:42 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ static int	checkdup(char **strs)
 		while (strs[j])
 		{
 			if (num[i] == num[j])
-				return (free(num),1);
+				return (free(num), 1);
 			j++;
 		}
 	}
-	return (free(num),0);
+	return (free(num), 0);
 }
 
 static char	*strjoin(int size, char **strs, char *sep)
