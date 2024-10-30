@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/30 16:43:59 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:55:52 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ int	main(int argc, char **argv)
 	if (argc == 1)
 		return (0);
 	stack_a = getlist(argc, argv);
+	ft_sa(stack_a);
+	ft_ra(stack_a);
 	if (!stack_a)
 	{
 		write(2, "Error\n", 6);
