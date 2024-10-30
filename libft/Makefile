@@ -9,16 +9,19 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OFILES)
-	ar rcs $(NAME) $(OFILES)
+	@ar rcs $(NAME) $(OFILES)
+
+%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 bonus : $(OFILES) $(BONUSO)
-	ar rcs $(NAME) $(OFILES) $(BONUSO)
+	@ar rcs $(NAME) $(OFILES) $(BONUSO)
 
 clean:
-	rm -f $(OFILES)
+	@rm -f $(OFILES)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean $(NAME)
 

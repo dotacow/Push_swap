@@ -6,11 +6,11 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/28 16:02:18 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:16:02 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 t_ilist	*ft_ilstnew(int content)
 {

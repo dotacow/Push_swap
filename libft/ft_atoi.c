@@ -6,11 +6,11 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 11:53:34 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/28 15:57:01 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:20:00 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" 
 
 int	ft_atoi(const char *nptr)
 {

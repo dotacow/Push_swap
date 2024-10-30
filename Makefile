@@ -1,10 +1,18 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = ft_free.c ilstoperations.c getlist.c push_swap.c #more files TBA.
-OFILES = $(SRC:.c=.o)
+
 LIBDIR = libft
-NAME = push_swap.out
 LIB = $(LIBDIR)/libft.a
+
+ILSTSRCS = ft_free.c ilstoperations.c getlist.c
+OPSRCS = ft_swap.c ft_push.c ft_rotate.c ft_rrotate.c
+
+SRCS = push_swap.c\
+$(addprefix opsrcs/,$(OPSRCS))\
+$(addprefix ilstop/,$(ILSTSRCS))
+
+OFILES = $(SRCS:.c=.o)
+NAME = push_swap.out
 
 all: $(NAME)
 

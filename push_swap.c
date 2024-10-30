@@ -6,16 +6,16 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/28 16:24:49 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:32:46 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // build the sa,sb,sss,ra,rb,rr,rra,rrb,rrr
-//do 5 and below
+//handel 5 nums and below
 	//2 /3 /4 /5
-//bubble sort
+//insertion sort
 // work on algorithim
 int	main(int argc, char **argv)
 {
