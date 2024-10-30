@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:37:06 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/30 15:52:55 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:37:20 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ static void	ft_rotate(t_ilist **stack)
 	head->next = NULL;
 }
 
-void	ft_rotate_a(t_ilist **stack_a)
+void	ft_ra(t_ilist **stack_a)
 {
 	ft_rotate(stack_a);
 	ft_printf("ra\n");
 }
 
-void	ft_rotate_b(t_ilist **stack_b)
+void	ft_rb(t_ilist **stack_b)
 {
 	ft_rotate(stack_b);
-	ft_printf(rb\n);
+	ft_printf("rb\n");
 }
 
-void	ft_rotate_r(t_ilist **stack_a, t_ilist **stack_b)
+void	ft_rr(t_ilist **stack_a, t_ilist **stack_b)
 {
 	ft_rotate(stack_a);
 	ft_rotate(stack_b);

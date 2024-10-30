@@ -6,14 +6,13 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/30 11:32:46 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:43:59 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// build the sa,sb,sss,ra,rb,rr,rra,rrb,rrr
-//handel 5 nums and below
+//handle 5 nums and below
 	//2 /3 /4 /5
 //insertion sort
 // work on algorithim
