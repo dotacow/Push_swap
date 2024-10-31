@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/31 18:42:46 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/31 20:49:28 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,10 @@
 //handle 5 nums and below
 	//2 /3 /4 /5
 //insertion sort
-// work on algorithim
+// work on algorithim (merge sort?)
 int	main(int argc, char **argv)
 {
 	t_ilist	**stack_a;
-
 	// t_ilist	**b;
 	if (argc == 1)
 		return (0);
