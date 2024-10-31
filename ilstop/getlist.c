@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/10/30 19:06:12 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/31 19:03:03 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int	checkdup(char **strs)
 {
 	int			i;
 	int			j;
-	long int	*num;
+	long long	*num;
 
 	i = 0;
 	while (strs[i])
@@ -49,10 +49,12 @@ static int	checkdup(char **strs)
 	i = -1;
 	while (strs[++i])
 	{
+		if (num[i] > 2147483647 || num[i] < -2147483648)
+			return (free(num), 1);
 		j = i + 1;
 		while (strs[j])
 		{
-			if (num[i] == num[j] || num[i] > 2147483647 || num[i] < -2147483648)
+			if (num[i] == num[j])
 				return (free(num), 1);
 			j++;
 		}

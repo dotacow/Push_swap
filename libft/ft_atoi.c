@@ -6,13 +6,13 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 11:53:34 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/30 19:17:34 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/10/31 19:03:18 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *nptr)
+long int	ft_atoi(const char *nptr)
 {
 	long int	sign;
 	long int	num;

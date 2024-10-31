@@ -19,8 +19,8 @@ void	ft_free(char **words)
 	i = 0;
 	while (words[i])
 	{
-		free (words[i]);
+		free(words[i]);
 		i++;
 	}
-	free (words);
+	free(words);
 }
