@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/01 11:55:55 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/01 12:12:49 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,10 @@ int	main(int argc, char **argv)
 	ft_pb(stack_a, stack_b);
 	ft_pa(stack_a, stack_b);
 	ft_ilstprint(*stack_b);
-	// ft_ilstclear(stack_a);
-	// ft_ilstclear(stack_b);
+	if (*stack_a)
+		ft_ilstclear(stack_a);
+	if (*stack_b)
+		ft_ilstclear(stack_b);
 	free(stack_b);
 	return (0);
 }
