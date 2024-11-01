@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:29:30 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/01 13:21:03 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/01 20:13:03 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,46 @@ int	is_sorted(t_ilist *lst)
 		tmp = tmp->next;
 	}
 	return (1);
+}
+
+int find_min(t_ilist *stack)
+{
+	int min;
+
+	min =  stack->num;
+	while (stack)
+	{
+		if (stack->num < min)
+			min = stack->num;
+		stack = stack->next;
+	}
+	return min;
+}
+
+int find_max(t_ilist *stack)
+{
+	int max;
+
+	max =  stack->num;
+	while (stack)
+	{
+		if (stack->num > max)
+			max = stack->num;
+		stack = stack->next;
+	}
+	return max;
+}
+int find_index(t_ilist *stack, int num)
+{
+	int index;
+
+	index = 0;
+	while (stack)
+	{
+		if (stack->num == num)
+			return index;
+		stack = stack->next;
+		index++;
+	}
+	return -1;
 }

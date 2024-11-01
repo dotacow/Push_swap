@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/01 13:23:20 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/01 21:43:57 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	main(int argc, char **argv)
 	}
 	*stack_b = NULL;
 	ft_sort(stack_a, stack_b);
+	if(is_sorted(*stack_a))
+		ft_printf("OK\n");
 	ft_ilstprint(*stack_a);
 	if (*stack_a)
 		ft_ilstclear(stack_a);

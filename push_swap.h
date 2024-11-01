@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/01 13:58:05 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/01 20:13:47 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ t_ilist	**getlist(int argc, char **argv);
 t_ilist	*ft_ilstnew(int content);
 t_ilist	*ft_ilstlast(t_ilist **lst);
 int		ft_ilstsize(t_ilist *lst);
-int	is_sorted(t_ilist *lst);
+int		is_sorted(t_ilist *lst);
+int	find_index(t_ilist *stack, int num);
+int	find_max(t_ilist *stack);
+int	find_min(t_ilist *stack);
 void	ft_ilstadd_back(t_ilist **lst, t_ilist *new);
 void	ft_ilstclear(t_ilist **lst);
 void	ft_ilstprint(t_ilist *lst);
