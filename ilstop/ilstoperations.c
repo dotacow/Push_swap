@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/31 18:45:13 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/01 12:26:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,16 @@ void	ft_ilstprint(t_ilist *lst)
 		ft_printf("%d\n", lst->num);
 		lst = lst->next;
 	}
+}
+int ft_ilstsize(t_ilist *lst)
+{
+	int i;
+
+	i = 0;
+	while (lst)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return (i);
 }

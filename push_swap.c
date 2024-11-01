@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/01 12:12:49 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/01 13:23:20 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 //handle 5 nums and below
 	//2 /3 /4 /5
+// work on visualizer
 //insertion sort
 // work on algorithim (merge sort?)
+
 int	main(int argc, char **argv)
 {
 	t_ilist	**stack_a;
@@ -25,16 +27,14 @@ int	main(int argc, char **argv)
 		return (0);
 	stack_a = getlist(argc, argv);
 	stack_b = malloc(sizeof(t_ilist *));
-	*stack_b = NULL;
 	if (!stack_a || !stack_b)
 	{
 		write(2, "Error\n", 6);
 		return (1);
 	}
-	ft_printf("stack a:\n");
-	ft_pb(stack_a, stack_b);
-	ft_pa(stack_a, stack_b);
-	ft_ilstprint(*stack_b);
+	*stack_b = NULL;
+	ft_sort(stack_a, stack_b);
+	ft_ilstprint(*stack_a);
 	if (*stack_a)
 		ft_ilstclear(stack_a);
 	if (*stack_b)
