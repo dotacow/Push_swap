@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:23:19 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/03 23:56:14 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:57:40 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-
-static void ft_sort_three(t_ilist **stack_a)
+static void	ft_sort_three(t_ilist **stack_a)
 {
-	int first;
-	int second;
-	int third;
+	int	first;
+	int	second;
+	int	third;
 
 	if (is_sorted(*stack_a))
 		return ;
@@ -42,9 +40,10 @@ static void ft_sort_three(t_ilist **stack_a)
 	else if (first < second && second > third && first > third)
 		ft_rra(stack_a);
 }
-static void ft_sort_four(t_ilist **stack_a, t_ilist **stack_b)
+
+static void	ft_sort_four(t_ilist **stack_a, t_ilist **stack_b)
 {
-	int min;
+	int	min;
 
 	if (is_sorted(*stack_a))
 		return ;
@@ -71,10 +70,9 @@ static void ft_sort_four(t_ilist **stack_a, t_ilist **stack_b)
 	ft_pa(stack_a, stack_b);
 }
 
-static void ft_sort_five(t_ilist **stack_a, t_ilist **stack_b)
+static void	ft_sort_five(t_ilist **stack_a, t_ilist **stack_b)
 {
-
-	int min;
+	int	min;
 
 	min = find_min(*stack_a);
 	while ((*stack_a)->num != min)
@@ -92,9 +90,9 @@ static void ft_sort_five(t_ilist **stack_a, t_ilist **stack_b)
 void	ft_sort(t_ilist **stack_a, t_ilist **stack_b)
 {
 	if (is_sorted(*stack_a))
-	return ;
+		return ;
 	if (ft_ilstsize(*stack_a) == 2)
-			ft_sa(stack_a);
+		ft_sa(stack_a);
 	else if (ft_ilstsize(*stack_a) == 3)
 		ft_sort_three(stack_a);
 	else if (ft_ilstsize(*stack_a) == 4)

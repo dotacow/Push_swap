@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ilstoperations.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/01 12:26:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/04 17:56:38 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,10 @@ void	ft_ilstprint(t_ilist *lst)
 		lst = lst->next;
 	}
 }
-int ft_ilstsize(t_ilist *lst)
+
+int	ft_ilstsize(t_ilist *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst)

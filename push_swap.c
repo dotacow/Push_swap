@@ -12,10 +12,10 @@
 
 #include "push_swap.h"
 
-//handle 5 nums and below
-	//2 /3 /4 /5
+// handle 5 nums and below
+// 2 /3 /4 /5
 // work on visualizer
-//insertion sort
+// insertion sort
 // work on algorithim (merge sort?)
 
 int	main(int argc, char **argv)
@@ -34,7 +34,7 @@ int	main(int argc, char **argv)
 	}
 	*stack_b = NULL;
 	ft_sort(stack_a, stack_b);
-	if(is_sorted(*stack_a))
+	if (is_sorted(*stack_a))
 		ft_printf("OK\n");
 	ft_ilstprint(*stack_a);
 	if (*stack_a)
