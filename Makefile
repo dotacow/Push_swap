@@ -3,14 +3,17 @@ CFLAGS = -Wall -Wextra -Werror
 LIBDIR = libft
 LIB = $(LIBDIR)/libft.a
 
-SRCS = ft_sort.c push_swap.c ft_free.c ilstoperations.c\
+SRC = ft_sort.c push_swap.c ft_free.c ilstoperations.c\
 getlist.c ilstop2.c ft_swap.c ft_push.c ft_rotate.c ft_rrotate.c
 
-SRCS := $(addprefix srcs/,$(SRCS))
+SRCS = $(addprefix srcs/,$(SRC))
 
-OFILES = $(SRCS:.c=.o)
-# OFILES := $(addprefix objs/,)
+OFILES := $(addprefix ofiles/,$(SRC:.c=.o))
 NAME = push_swap
+
+ofiles/%.o: srcs/%.c
+	mkdir -p ofiles
+	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
@@ -21,7 +24,7 @@ $(LIB):
 	make -C $(LIBDIR)
 
 clean:
-	rm -f $(OFILES)
+	rm -rf ofiles
 	make clean -C $(LIBDIR)
 fclean: clean
 	make fclean -C $(LIBDIR)
