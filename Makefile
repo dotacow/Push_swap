@@ -12,7 +12,7 @@ $(addprefix opsrcs/,$(OPSRCS))\
 $(addprefix ilstop/,$(ILSTSRCS))
 
 OFILES = $(SRCS:.c=.o)
-NAME = push_swap.out
+NAME = push_swap
 
 all: $(NAME)
 

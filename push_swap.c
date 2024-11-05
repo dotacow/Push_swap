@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/01 21:43:57 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/05 12:17:58 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// handle 5 nums and below
-// 2 /3 /4 /5
 // work on visualizer
 // insertion sort
-// work on algorithim (merge sort?)
+// work on algorithim (turkish alg)
 
 int	main(int argc, char **argv)
 {
