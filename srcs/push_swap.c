@@ -6,15 +6,13 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/05 16:25:34 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:32:48 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
 
-//make a cleaner makefile
-//--------------------
 // install visualizer
 // work on checker (bonus)
 //--------------------
@@ -27,9 +25,11 @@
 	// backtracking
 //-------------------
 // stuff to build:
-// find_cheapest
+// find_cheapest(things to consider)
 	//cheapest to move to head
-	//
+	//n operations post push such that b is sorted in reverse
+	// n = 1
+
 // push_cheapest
 
 
