@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   getlist.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/05 12:18:55 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/11/06 09:58:15 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ static int	checkdup(char **strs)
 	i = -1;
 	while (strs[++i])
 	{
-		if (num[i] > 2147483647 || num[i] < -2147483648)
+		if (num[i] > FTINTMAX || num[i] < FTINTMIN)
 			return (free(num), 1);
 		j = i + 1;
 		while (strs[j])
