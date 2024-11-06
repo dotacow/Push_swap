@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:21:56 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/06 10:39:00 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/06 19:32:49 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@
 
 # define FTINTMAX 2147483647
 # define FTINTMIN -2147483648
+
 typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
-}					t_list;
+}		t_list;
 
 typedef struct s_ilist
 {
