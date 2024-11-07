@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:23:19 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/06 19:48:08 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:06:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,22 @@ void	ft_sort(t_ilist **stack_a, t_ilist **stack_b)
 		ft_sort_five(stack_a, stack_b);
 	else
 	{
-		write(2, "come here later ):\n", 19);
+		write(2, "come back later ):\n", 19);
 		exit(1);
 	}
 }
+/*void	get_top_stack_a(t_stacks *stacks, t_stack_a *head_a, int i)
+{
+	int size;
+
+	stacks->moves->pb = 1;
+	stacks->moves->ra = 0;
+	stacks->moves->rra = 0;
+	if (stacks->head_a->content == head_a->content)
+		return;
+	size = ft_listsize_a(stacks->head_a);
+	if (i >= size / 2)
+		stacks->moves->rra = (size - i);
+	else
+		stacks->moves->ra = i;
+}*/

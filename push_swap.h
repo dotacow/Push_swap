@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/06 19:53:15 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/07 11:35:39 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,14 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
+
+
+typedef struct s_stacks
+{
+	t_ilist	*head_a;
+	t_ilist	*head_b;
+
+}		t_stacks;
 
 // num operations
 int		find_index(t_ilist *stack, int num);
