@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:04:21 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,7 +128,7 @@ t_stack **getlist(int argc, char **argv)
 		if (i == 0)
 			*head = temp;
 		if (!temp)
-			return (ft_ilstclear(head), ft_free(strs), NULL);
+			return (ft_dlstclear(head), ft_free(strs), NULL);
 		ft_ilstadd_back(head, temp);
 		i++;
 	}

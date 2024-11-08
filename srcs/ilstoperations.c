@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 12:09:25 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:30:00 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,6 @@ void	ft_ilstadd_back(t_stack **lst, t_stack *new)
 	last->next = new;
 	new->prev = last;
 	new->next = NULL;
-}
-
-void	ft_ilstclear(t_stack **lst)
-{
-	t_stack	*tmp;
-
-	while (*lst)
-	{
-		tmp = (*lst)->next;
-		free(*lst);
-		*lst = tmp;
-	}
-	free(lst);
 }
 
 void	ft_dlstclear(t_stack **lst)

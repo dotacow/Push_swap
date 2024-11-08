@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/08 12:09:25 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:08:33 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,7 @@ t_stack	**getlist(int argc, char **argv);
 t_stack	*ft_ilstnew(int content);
 t_stack	*ft_ilstlast(t_stack **lst);
 void	ft_ilstadd_back(t_stack **lst, t_stack *new);
-void	ft_ilstclear(t_stack **lst);
-void	ft_dlstclear(t_stack **lst);
 void	ft_ilstprint(t_stack *lst);
-void	ft_free(char **words);
 //list instructions
 void	ft_ra(t_stack **stack_a);
 void	ft_sort(t_stack **stack_a, t_stack **stack_b);
@@ -51,5 +48,8 @@ void	ft_rrr(t_stack **stack_a, t_stack **stack_b);
 void	ft_sa(t_stack **stack_a);
 void	ft_sb(t_stack **stack_b);
 void	ft_ss(t_stack **stack_a, t_stack **stack_b);
+//exit functions
+void	ft_free(char **words);
+void	ft_dlstclear(t_stack **lst);
 
 #endif

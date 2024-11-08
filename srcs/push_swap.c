@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 12:11:02 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:22:23 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,6 @@
 //-------------------
 // stuff to build:
 // find_cheapest(things to consider)
-	//cheapest to move to head
-	//n operations post push such that b is sorted in reverse
-	// n = 1
-	//once you get cheapest
-		//if cheapest is min of b
-		//if cheapest is max of b
-		//everything else
-// push_cheapest
-// insert_index
-
 int	main(int argc, char **argv)
 {
 	t_stack	**stack_a;
