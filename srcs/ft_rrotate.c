@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:37:04 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:08:45 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ static void	ft_rrotate(t_stack **stack)
 		tmp = tmp->next;
 	}
 	tmp->next = head;
+	tmp->prev = NULL;
+	head->prev = tmp;
 	prev->next = NULL;
 	*stack = tmp;
 }

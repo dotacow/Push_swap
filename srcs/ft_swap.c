@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:37:02 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:08:31 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,11 @@ static void	ft_swap(t_stack **stack)
 	head = *stack;
 	tmp = head->next;
 	head->next = tmp->next;
+	if (tmp->next)
+		tmp->next->prev = head;
 	tmp->next = head;
+	tmp->prev = head->prev;
+	head->prev = tmp;
 	*stack = tmp;
 }
 

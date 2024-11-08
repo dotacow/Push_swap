@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:09:25 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_stack	*ft_ilstnew(int content)
 	if (!new)
 		return (NULL);
 	new->num = content;
+	new->prev = NULL;
 	new->next = NULL;
 	return (new);
 }
@@ -47,10 +48,24 @@ void	ft_ilstadd_back(t_stack **lst, t_stack *new)
 	}
 	last = ft_ilstlast(lst);
 	last->next = new;
+	new->prev = last;
 	new->next = NULL;
 }
 
 void	ft_ilstclear(t_stack **lst)
+{
+	t_stack	*tmp;
+
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		free(*lst);
+		*lst = tmp;
+	}
+	free(lst);
+}
+
+void	ft_dlstclear(t_stack **lst)
 {
 	t_stack	*tmp;
 

@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:37:00 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:08:07 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,11 @@ static void	ft_push(t_stack **stack_a, t_stack **stack_b)
 		return ;
 	tmp = *stack_a;
 	*stack_a = (*stack_a)->next;
+	if (*stack_a)
+		(*stack_a)->prev = NULL;
 	tmp->next = *stack_b;
+	if (*stack_b)
+		(*stack_b)->prev = tmp;
 	*stack_b = tmp;
 }
 

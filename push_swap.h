@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/08 11:56:26 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:09:25 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ t_stack	*ft_ilstnew(int content);
 t_stack	*ft_ilstlast(t_stack **lst);
 void	ft_ilstadd_back(t_stack **lst, t_stack *new);
 void	ft_ilstclear(t_stack **lst);
+void	ft_dlstclear(t_stack **lst);
 void	ft_ilstprint(t_stack *lst);
 void	ft_free(char **words);
 //list instructions

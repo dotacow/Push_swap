@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 12:11:02 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,13 @@ int	main(int argc, char **argv)
 	stack_a = getlist(argc, argv);
 	stack_b = malloc(sizeof(t_stack *));
 	if (!stack_a || !stack_b)
-		return (1,write(2, "Error\n", 6));
+		return (free(stack_b), write(2, "Error\n", 6));
 	*stack_b = NULL;
 	ft_sort(stack_a, stack_b);
 	if (*stack_a)
-		ft_ilstclear(stack_a);
+		ft_dlstclear(stack_a);
 	if (*stack_b)
-		ft_ilstclear(stack_b);
+		ft_dlstclear(stack_b);
 	free(stack_b);
 	return (0);
 }
