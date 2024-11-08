@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/07 17:05:12 by dotacow          ###   ########.fr       */
+/*   Updated: 2024/11/08 11:56:26 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,43 +15,40 @@
 
 # include "libft/libft.h"
 
-typedef struct s_stacks
+//structs
+typedef struct s_stack
 {
-	t_ilist	*head_a;
-	t_ilist	*head_b;
-	struct t_values	*values;
-	struct t_moves	*moves;
-	struct t_cmoves	*cmoves;
-
-}		t_stacks;
-
-
-
-// num operations
-int		find_index(t_ilist *stack, int num);
-int		find_max(t_ilist *stack);
-int		find_min(t_ilist *stack);
+	long			num;
+	long			index;
+	struct s_stack	*next;
+	struct s_stack	*prev;
+}	t_stack;
+//ilstop2
+int		find_index(t_stack *stack, int num);
+int		find_max(t_stack *stack);
+int		find_min(t_stack *stack);
+int	is_sorted(t_stack *lst);
 //stack operations
-int		ft_ilstsize(t_ilist *lst);
-t_ilist	**getlist(int argc, char **argv);
-t_ilist	*ft_ilstnew(int content);
-t_ilist	*ft_ilstlast(t_ilist **lst);
-void	ft_ilstadd_back(t_ilist **lst, t_ilist *new);
-void	ft_ilstclear(t_ilist **lst);
-void	ft_ilstprint(t_ilist *lst);
+int		ft_ilstsize(t_stack *lst);
+t_stack	**getlist(int argc, char **argv);
+t_stack	*ft_ilstnew(int content);
+t_stack	*ft_ilstlast(t_stack **lst);
+void	ft_ilstadd_back(t_stack **lst, t_stack *new);
+void	ft_ilstclear(t_stack **lst);
+void	ft_ilstprint(t_stack *lst);
 void	ft_free(char **words);
 //list instructions
-void	ft_ra(t_ilist **stack_a);
-void	ft_sort(t_ilist **stack_a, t_ilist **stack_b);
-void	ft_rb(t_ilist **stack_b);
-void	ft_rr(t_ilist **stack_a, t_ilist **stack_b);
-void	ft_pa(t_ilist **stack_a, t_ilist **stack_b);
-void	ft_pb(t_ilist **stack_a, t_ilist **stack_b);
-void	ft_rra(t_ilist **stack_a);
-void	ft_rrb(t_ilist **stack_b);
-void	ft_rrr(t_ilist **stack_a, t_ilist **stack_b);
-void	ft_sa(t_ilist **stack_a);
-void	ft_sb(t_ilist **stack_b);
-void	ft_ss(t_ilist **stack_a, t_ilist **stack_b);
+void	ft_ra(t_stack **stack_a);
+void	ft_sort(t_stack **stack_a, t_stack **stack_b);
+void	ft_rb(t_stack **stack_b);
+void	ft_rr(t_stack **stack_a, t_stack **stack_b);
+void	ft_pa(t_stack **stack_a, t_stack **stack_b);
+void	ft_pb(t_stack **stack_a, t_stack **stack_b);
+void	ft_rra(t_stack **stack_a);
+void	ft_rrb(t_stack **stack_b);
+void	ft_rrr(t_stack **stack_a, t_stack **stack_b);
+void	ft_sa(t_stack **stack_a);
+void	ft_sb(t_stack **stack_b);
+void	ft_ss(t_stack **stack_a, t_stack **stack_b);
 
 #endif

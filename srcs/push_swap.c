@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/06 19:48:27 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,18 +38,15 @@
 
 int	main(int argc, char **argv)
 {
-	t_ilist	**stack_a;
-	t_ilist	**stack_b;
+	t_stack	**stack_a;
+	t_stack	**stack_b;
 
 	if (argc == 1)
 		return (0);
 	stack_a = getlist(argc, argv);
-	stack_b = malloc(sizeof(t_ilist *));
+	stack_b = malloc(sizeof(t_stack *));
 	if (!stack_a || !stack_b)
-	{
-		write(2, "Error\n", 6);
-		return (1);
-	}
+		return (1,write(2, "Error\n", 6));
 	*stack_b = NULL;
 	ft_sort(stack_a, stack_b);
 	if (*stack_a)

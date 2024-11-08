@@ -6,13 +6,13 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:23:19 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/07 12:16:44 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	ft_sort_three(t_ilist **stack_a)
+static void	ft_sort_three(t_stack **stack_a)
 {
 	int	first;
 	int	second;
@@ -41,7 +41,7 @@ static void	ft_sort_three(t_ilist **stack_a)
 		ft_rra(stack_a);
 }
 
-static void	ft_sort_four(t_ilist **stack_a, t_ilist **stack_b)
+static void	ft_sort_four(t_stack **stack_a, t_stack **stack_b)
 {
 	int	min;
 
@@ -70,7 +70,7 @@ static void	ft_sort_four(t_ilist **stack_a, t_ilist **stack_b)
 	ft_pa(stack_a, stack_b);
 }
 
-static void	ft_sort_five(t_ilist **stack_a, t_ilist **stack_b)
+static void	ft_sort_five(t_stack **stack_a, t_stack **stack_b)
 {
 	int	min;
 
@@ -87,7 +87,7 @@ static void	ft_sort_five(t_ilist **stack_a, t_ilist **stack_b)
 	ft_pa(stack_a, stack_b);
 }
 
-void	ft_sort(t_ilist **stack_a, t_ilist **stack_b)
+void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	if (is_sorted(*stack_a))
 		return ;

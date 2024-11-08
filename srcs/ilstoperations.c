@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ilstoperations.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/04 17:56:38 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_ilist	*ft_ilstnew(int content)
+t_stack	*ft_ilstnew(int content)
 {
-	t_ilist	*new;
+	t_stack	*new;
 
-	new = malloc(sizeof(t_ilist));
+	new = malloc(sizeof(t_stack));
 	if (!new)
 		return (NULL);
 	new->num = content;
@@ -24,9 +24,9 @@ t_ilist	*ft_ilstnew(int content)
 	return (new);
 }
 
-t_ilist	*ft_ilstlast(t_ilist **lst)
+t_stack	*ft_ilstlast(t_stack **lst)
 {
-	t_ilist	*last;
+	t_stack	*last;
 
 	last = *lst;
 	if (!last)
@@ -36,9 +36,9 @@ t_ilist	*ft_ilstlast(t_ilist **lst)
 	return (last);
 }
 
-void	ft_ilstadd_back(t_ilist **lst, t_ilist *new)
+void	ft_ilstadd_back(t_stack **lst, t_stack *new)
 {
-	t_ilist	*last;
+	t_stack	*last;
 
 	if (!*lst)
 	{
@@ -50,9 +50,9 @@ void	ft_ilstadd_back(t_ilist **lst, t_ilist *new)
 	new->next = NULL;
 }
 
-void	ft_ilstclear(t_ilist **lst)
+void	ft_ilstclear(t_stack **lst)
 {
-	t_ilist	*tmp;
+	t_stack	*tmp;
 
 	while (*lst)
 	{
@@ -63,7 +63,7 @@ void	ft_ilstclear(t_ilist **lst)
 	free(lst);
 }
 
-void	ft_ilstprint(t_ilist *lst)
+void	ft_ilstprint(t_stack *lst)
 {
 	while (lst)
 	{
@@ -72,7 +72,7 @@ void	ft_ilstprint(t_ilist *lst)
 	}
 }
 
-int	ft_ilstsize(t_ilist *lst)
+int	ft_ilstsize(t_stack *lst)
 {
 	int	i;
 

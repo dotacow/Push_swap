@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ilstop2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:29:30 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/04 17:53:49 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	is_sorted(t_ilist *lst)
+int	is_sorted(t_stack *lst)
 {
-	t_ilist	*tmp;
+	t_stack	*tmp;
 
 	tmp = lst;
 	while (tmp->next)
@@ -26,7 +26,7 @@ int	is_sorted(t_ilist *lst)
 	return (1);
 }
 
-int	find_min(t_ilist *stack)
+int	find_min(t_stack *stack)
 {
 	int	min;
 
@@ -40,7 +40,7 @@ int	find_min(t_ilist *stack)
 	return (min);
 }
 
-int	find_max(t_ilist *stack)
+int	find_max(t_stack *stack)
 {
 	int	max;
 
@@ -54,7 +54,7 @@ int	find_max(t_ilist *stack)
 	return (max);
 }
 
-int	find_index(t_ilist *stack, int num)
+int	find_index(t_stack *stack, int num)
 {
 	int	index;
 

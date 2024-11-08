@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 11:21:56 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/06 19:32:49 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:43:31 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }		t_list;
-
-typedef struct s_ilist
-{
-	long int		num;
-	struct s_ilist	*next;
-}					t_ilist;
 
 t_list		*ft_lstnew(int content);
 t_list		*ft_lstlast(t_list *lst);

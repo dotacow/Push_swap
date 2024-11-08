@@ -6,17 +6,17 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:37:04 by yokitane          #+#    #+#             */
-/*   Updated: 2024/10/31 19:04:35 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	ft_rrotate(t_ilist **stack)
+static void	ft_rrotate(t_stack **stack)
 {
-	t_ilist	*tmp;
-	t_ilist	*head;
-	t_ilist	*prev;
+	t_stack	*tmp;
+	t_stack	*head;
+	t_stack	*prev;
 
 	if (!*stack || !((*stack)->next))
 		return ;
@@ -32,19 +32,19 @@ static void	ft_rrotate(t_ilist **stack)
 	*stack = tmp;
 }
 
-void	ft_rra(t_ilist **stack_a)
+void	ft_rra(t_stack **stack_a)
 {
 	ft_rrotate(stack_a);
 	ft_printf("rra\n");
 }
 
-void	ft_rrb(t_ilist **stack_b)
+void	ft_rrb(t_stack **stack_b)
 {
 	ft_rrotate(stack_b);
 	ft_printf("rrb\n");
 }
 
-void	ft_rrr(t_ilist **stack_a, t_ilist **stack_b)
+void	ft_rrr(t_stack **stack_a, t_stack **stack_b)
 {
 	ft_rrotate(stack_a);
 	ft_rrotate(stack_b);

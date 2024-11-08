@@ -6,12 +6,13 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/06 09:58:15 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 11:52:17 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
+//checks for nonintegers/signs
 static int	checkinvalid(char **strs)
 {
 	int	i;
@@ -32,7 +33,7 @@ static int	checkinvalid(char **strs)
 	}
 	return (0);
 }
-
+//this function checks for duplicates and invalid inputs
 static int	checkdup(char **strs)
 {
 	int			i;
@@ -61,7 +62,7 @@ static int	checkdup(char **strs)
 	}
 	return (free(num), 0);
 }
-
+// piscine strjoin(slightly modified)
 static char	*strjoin(int size, char **strs, char *sep)
 {
 	char	*s;
@@ -90,7 +91,8 @@ static char	*strjoin(int size, char **strs, char *sep)
 	}
 	return (s[k] = 0, s);
 }
-
+//this function combines split and strjoin to parse the input string
+//after parsing, we get a 2d array of strings which is used to create the linked list
 static char	**parsestr(int size, char **argv)
 {
 	char	*joined;
@@ -105,19 +107,19 @@ static char	**parsestr(int size, char **argv)
 		return (NULL);
 	return (split);
 }
-
-t_ilist	**getlist(int argc, char **argv)
+//this functions takes the argv, parses it and returns a stack.
+t_stack **getlist(int argc, char **argv)
 {
 	char	**strs;
 	int		i;
-	t_ilist	**head;
-	t_ilist	*temp;
+	t_stack **head;
+	t_stack	*temp;
 
 	strs = parsestr(--argc, argv + 1);
 	if (!strs || checkinvalid(strs) || checkdup(strs))
 		return (ft_free(strs), NULL);
 	i = 0;
-	head = malloc(sizeof(t_ilist *));
+	head = malloc(sizeof(t_stack *));
 	if (!head)
 		return (NULL);
 	while (strs[i])
