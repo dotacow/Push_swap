@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 14:22:23 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:59:35 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,18 @@
 // get cheapest number to push to b such that b is sorted in reverse
 // repeat until largest is left in stack a || sorted || 3 left
 // push all back to a
+// 	if smallest/largest value, pb
+//	if cheapest requires rotations, calculate on both stacks
+//		execute rrr/rr to save stack unique rotations
+//	ra ra ra rb rb--> rr rr ra
 //-------------------
-// research:
-	//
+//	cheapest num to pb
+//		//num to be pushed is etiher min or max of stack_b
+//		//current head_a is neither,
+//			//if we push, how many moves till stack_b is sorted
+//		//
+//
+//
 //-------------------
 // stuff to build:
 // find_cheapest(things to consider)
