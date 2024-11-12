@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/12 07:34:14 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/12 08:00:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,21 @@
 
 # include "libft/libft.h"
 
-//structs
+//index is current index
+//t_index is true index/rank
+//d_next is distance to supposed next
+//d_prev is distance to supposed previous
 typedef struct s_stack
 {
 	long			num;
 	long			index;
-	long			true_index;//this is the same as the rank
+	int				t_index;
+	int				d_next;
+	int				d_prev;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
+
 //ilstop2
 int		find_index(t_stack *stack, int num);
 int		find_max(t_stack *stack);
@@ -37,8 +43,8 @@ t_stack	*ft_ilstlast(t_stack **lst);
 void	ft_ilstadd_back(t_stack **lst, t_stack *new);
 void	ft_ilstprint(t_stack *lst);
 //list instructions
-void	ft_ra(t_stack **stack_a);
 void	ft_sort(t_stack **stack_a, t_stack **stack_b);
+void	ft_ra(t_stack **stack_a);
 void	ft_rb(t_stack **stack_b);
 void	ft_rr(t_stack **stack_a, t_stack **stack_b);
 void	ft_pa(t_stack **stack_a, t_stack **stack_b);
@@ -50,6 +56,7 @@ void	ft_sa(t_stack **stack_a);
 void	ft_sb(t_stack **stack_b);
 void	ft_ss(t_stack **stack_a, t_stack **stack_b);
 //exit functions
+void	ft_perror(char *str, t_stack **stack_a, t_stack **stack_b);
 void	ft_free(char **words);
 void	ft_dlstclear(t_stack **lst);
 
