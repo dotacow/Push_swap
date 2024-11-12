@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:29:30 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 12:21:35 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/12 08:13:45 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	find_max(t_stack *stack)
 	return (max);
 }
 //returns index of given num in stack
-int	find_index(t_stack *stack, int num)
+int	get_index(t_stack *stack, int num)
 {
 	int	index;
 
