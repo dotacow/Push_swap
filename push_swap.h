@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/08 14:08:33 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/12 07:34:14 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ typedef struct s_stack
 {
 	long			num;
 	long			index;
+	long			true_index;//this is the same as the rank
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
