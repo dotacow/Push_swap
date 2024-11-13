@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-//this frees the 2d str after we are get the list from it
+
+// this frees the 2d str after we are get the list from it
 void	ft_free(char **words)
 {
 	int	i;

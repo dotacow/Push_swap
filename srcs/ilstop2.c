@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ilstop2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:29:30 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/12 08:13:45 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:43:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ int	is_sorted(t_stack *lst)
 	}
 	return (1);
 }
-//returns smallest number in the stack
+
+// returns smallest number in the stack
 int	find_min(t_stack *stack)
 {
 	int	min;
@@ -39,7 +40,8 @@ int	find_min(t_stack *stack)
 	}
 	return (min);
 }
-//returns largest number in the stack
+
+// returns largest number in the stack
 int	find_max(t_stack *stack)
 {
 	int	max;
@@ -53,7 +55,8 @@ int	find_max(t_stack *stack)
 	}
 	return (max);
 }
-//returns index of given num in stack
+
+// returns index of given num in stack
 int	get_index(t_stack *stack, int num)
 {
 	int	index;

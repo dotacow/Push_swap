@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 18:59:35 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/09 14:57:39 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 // work on algorithim (jordanian alg)
 // init b (pb x2)
 // get cheapest number to push to b such that b is sorted in reverse
+//
 // repeat until largest is left in stack a || sorted || 3 left
 // push all back to a
 // 	if smallest/largest value, pb

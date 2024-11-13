@@ -6,13 +6,13 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:23:19 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 19:00:58 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/08 20:02:40 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-//hardcoded 3 cases sorter
+// hardcoded 3 cases sorter
 static void	ft_sort_three(t_stack **stack_a)
 {
 	int	first;
