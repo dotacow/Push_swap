@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/13 19:25:55 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/13 19:50:47 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ int		find_index(t_stack *stack, int num);
 int		find_max(t_stack *stack);
 int		find_min(t_stack *stack);
 t_stack	*ft_ilstlast(t_stack **stack);
+t_stack	*find_optimal(t_stack)//tbd
 // stack specific functions
 int		ft_ilstsize(t_stack *stack);
 int		is_sorted(t_stack *stack);
