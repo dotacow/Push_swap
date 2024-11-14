@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 17:23:49 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/14 12:33:28 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:51:57 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,18 @@ void	ft_free(char **words)
 		i++;
 	}
 	free(words);
+}
+void	ft_perror(char *str, t_stack **stack_a, t_stack **stack_b);
+
+void	ft_dlstclear(t_stack **lst)
+{
+	t_stack	*tmp;
+
+	while (*lst)
+	{
+		tmp = (*lst)->next;
+		free(*lst);
+		*lst = tmp;
+	}
+	free(lst);
 }

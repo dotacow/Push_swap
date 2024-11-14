@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:33:57 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/14 13:34:08 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:42:09 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,4 @@ int	find_index(t_stack *stack, int num)
 	}
 	return (-1);
 }
+void	node_cost(t_stack *stack);

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 11:37:00 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/08 12:08:07 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:04:41 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../includes/push_swap.h"
 
 static void	ft_push(t_stack **stack_a, t_stack **stack_b)
 {

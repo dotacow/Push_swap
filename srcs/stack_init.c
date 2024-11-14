@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:27:34 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/14 12:35:03 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/14 14:14:09 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,3 @@ t_stack	*ft_ilstnew(int content)
 }
 
 void	rank_stack(t_stack **stack); // tbd
-
