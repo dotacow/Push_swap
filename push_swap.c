@@ -6,36 +6,26 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/09 14:57:39 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/14 13:38:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "includes/push_swap.h"
 
-// install visualizer
-// work on checker (bonus)
+// push_swap
+// 	work on checker (bonus)
 //--------------------
 // work on algorithim (jordanian alg)
-// init b (pb x2)
-// get cheapest number to push to b such that b is sorted in reverse
-//
-// repeat until largest is left in stack a || sorted || 3 left
-// push all back to a
-// 	if smallest/largest value, pb
-//	if cheapest requires rotations, calculate on both stacks
-//		execute rrr/rr to save stack unique rotations
-//	ra ra ra rb rb--> rr rr ra
+//  (three way quick sort)
+//  treat each end (head, tail) of stack as a seperate stack
+//  have 3 pointers?
 //-------------------
-//	cheapest num to pb
-//		//num to be pushed is etiher min or max of stack_b
-//		//current head_a is neither,
-//			//if we push, how many moves till stack_b is sorted
-//		//
-//
-//
-//-------------------
-// stuff to build:
-// find_cheapest(things to consider)
+// tbd:
+// node_cost()
+// rank_stack()
+// ft_execute()
+// find_optimal()
+// ft_perror();
 int	main(int argc, char **argv)
 {
 	t_stack	**stack_a;

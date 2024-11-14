@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/14 13:27:18 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/14 12:45:54 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,23 +59,22 @@ typedef struct s_instruction_cost
 
 }	t_instruction_cost;
 // stack init functions
-void	rank_stack(t_stack **stack); // tbd
-void	ft_ilstadd_back(t_stack **stack, t_stack *new);
-t_stack	*ft_ilstnew(int content);
 t_stack	**getlist(int argc, char **argv);
-// node helper functions (stack_helpers.c1)
+void	rank_stack(t_stack **stack); // tbd
+t_stack	*ft_ilstnew(int content);
+void	ft_ilstadd_back(t_stack **stack, t_stack *new);
+// element/node specific functions
 int		find_index(t_stack *stack, int num);
 int		find_max(t_stack *stack);
 int		find_min(t_stack *stack);
 t_stack	*ft_ilstlast(t_stack **stack);
-void	node_cost(t_stack *stack);// tbd
 // stack specific functions
 int		ft_ilstsize(t_stack *stack);
 int		is_sorted(t_stack *stack);
 int		is_empty(t_stack *stack);
 void	ft_ilstprint(t_stack *stack);
 // list instructions (tb combined into a single function)
-void	ft_execute(t_instruction_cost);//tbd
+void	ft_execute(t_instructions instruction);//tbd
 void	ft_ra(t_stack **stack_a);
 void	ft_rb(t_stack **stack_b);
 void	ft_rr(t_stack **stack_a, t_stack **stack_b);
