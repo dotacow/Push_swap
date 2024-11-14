@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/14 14:31:44 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:34:48 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	node_cost(t_stack *stack);// tbd
 int		ft_ilstsize(t_stack *stack);
 void	ft_ilstprint(t_stack *stack);
 // list instructions
-void	ft_tally(t_instruction_cost *cost);
+void	ft_tally(t_instruction_cost cost);//tbd
 void	ft_execute(t_instruction_cost *cost);//tbd
 // checks
 int		is_sorted(t_stack *stack);

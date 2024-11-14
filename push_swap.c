@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/14 13:58:19 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/14 16:34:33 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 // find_optimal()
 // ft_perror()
 // is_empty()
+// ft_tally
 int	main(int argc, char **argv)
 {
 	t_stack	**stack_a;
