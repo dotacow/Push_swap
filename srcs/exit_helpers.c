@@ -28,11 +28,11 @@ void	ft_free(char **words)
 
 void	ft_perror(char *str, t_stack **stack_a, t_stack **stack_b)
 {
-	ft_putstr_fd(str,2);
+	ft_putstr_fd(str, 2);
 	if (stack_a)
 		ft_dlstclear(stack_a);
-	if(stack_b)
-	ft_dlstclear(stack_b);
+	if (stack_b)
+		ft_dlstclear(stack_b);
 	exit(1);
 }
 

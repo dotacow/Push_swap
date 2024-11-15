@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 12:27:34 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/15 11:13:54 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:49:58 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,13 +39,47 @@ t_stack	*ft_ilstnew(int content)
 	new->next = NULL;
 	return (new);
 }
-t_stack *ft_ilstlast(t_stack **lst)
+
+t_stack	*ft_ilstlast(t_stack **lst)
 {
-	t_stack *last;
+	t_stack	*last;
 
 	last = *lst;
 	while (last->next)
 		last = last->next;
 	return (last);
 }
-void	rank_stack(t_stack **stack); // tbd
+static void init_rank(t_stack **stack)
+{
+	t_stack *tmp;
+
+	tmp = *stack;
+	while (tmp)
+	{
+		tmp->rank = -1;
+		tmp = tmp->next;
+	}
+}
+void	rank_stack(t_stack **stack)
+{
+	t_stack *current;
+	t_stack *tmp;
+	long rank;
+
+	init_rank(stack);
+	rank = 0;
+	while (rank < ft_ilstsize(*stack))
+	{
+		current = NULL;
+		tmp = *stack;
+		while (tmp)
+		{
+			if (tmp->rank == -1 && (!current || tmp->num < current->num))
+				current = tmp;
+			tmp = tmp->next;
+		}
+		if (!current)
+			break;
+		current->rank = rank++;
+	}
+}

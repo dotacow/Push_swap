@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   instructions.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:05:54 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/15 11:08:19 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:32:25 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INSTRUCTIONS_H
 # define INSTRUCTIONS_H
 
-typedef struct s_stack t_stack;
+typedef struct s_stack	t_stack;
 
 typedef enum e_instructions
 {
