@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/14 16:34:33 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:23:34 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/push_swap.h"
+#include "../includes/push_swap.h"
 
 // push_swap
 // 	work on checker (bonus)

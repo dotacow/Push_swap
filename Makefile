@@ -1,18 +1,20 @@
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -I includes
 LIBDIR = libft
 LIB = $(LIBDIR)/libft.a
 
-SRC = ft_sort.c push_swap.c ft_free.c ilstoperations.c\
-getlist.c ilstop2.c ft_swap.c ft_push.c ft_rotate.c ft_rrotate.c
+INSTRUCTIONS = ft_swap.c ft_push.c ft_rotate.c ft_rrotate.c
+INSTRUCTIONS := $(addprefix instructions/,$(INSTRUCTIONS))
 
-SRCS = $(addprefix srcs/,$(SRC))
+SRC = push_swap.c algo.c checks.c exit_helpers.c ft_sort.c getlist.c node_helpers.c stack_helpers.c stack_init.c $(INSTRUCTIONS)
+
+SRCS =  $(addprefix srcs/,$(SRC))
 
 OFILES := $(addprefix ofiles/,$(SRC:.c=.o))
 NAME = push_swap
 
 ofiles/%.o: srcs/%.c
-	mkdir -p ofiles
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
@@ -26,6 +28,7 @@ $(LIB):
 clean:
 	rm -rf ofiles
 	make clean -C $(LIBDIR)
+
 fclean: clean
 	make fclean -C $(LIBDIR)
 	rm -f $(NAME)

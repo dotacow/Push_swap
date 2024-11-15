@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_helpers.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/14 13:51:54 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:00:50 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 void	ft_ilstprint(t_stack *lst)
 {

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ilstop2.c                                          :+:      :+:    :+:   */
+/*   checks.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:29:30 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/14 13:58:34 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:00:59 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 int	is_sorted(t_stack *lst)
 {

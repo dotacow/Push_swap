@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/14 16:34:48 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:14:46 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	rank_stack(t_stack **stack); // tbd
 void	ft_ilstadd_back(t_stack **stack, t_stack *new);
 t_stack	*ft_ilstnew(int content);
 t_stack	**getlist(int argc, char **argv);
+t_stack *ft_ilstlast(t_stack **lst);
 // node specific functions (node_helpers.c)
 int		find_index(t_stack *stack, int num);
 int		find_max(t_stack *stack);

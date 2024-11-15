@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   getlist.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/13 14:43:37 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/15 11:00:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../includes/push_swap.h"
 
 // checks for nonintegers/signs
 static int	checkinvalid(char **strs)
