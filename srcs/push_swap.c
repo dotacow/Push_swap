@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/15 11:23:34 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/16 09:38:54 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,13 @@
 // push_swap
 // 	work on checker (bonus)
 //--------------------
-// work on algorithim (jordanian alg)
+// work on algorithim
 //  (three way quick sort)
-//  treat each end (head, tail) of stack as a seperate stack
-//  have 3 pointers?
+//  treat each end as a partition
+// keep splitting the partitions until the partitions are sorted
 //-------------------
 // tbd:
-// node_cost()
-// rank_stack()
-// ft_execute()
-// find_optimal()
-// ft_perror()
 // is_empty()
-// ft_tally
 int	main(int argc, char **argv)
 {
 	t_stack	**stack_a;
