@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/15 11:00:55 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/16 08:19:05 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -137,5 +137,7 @@ t_stack	**getlist(int argc, char **argv)
 		ft_ilstadd_back(head, temp);
 		i++;
 	}
-	return (ft_free(strs), head);
+	rank_stack(head);
+	ft_free(strs);
+	return (head);
 }
