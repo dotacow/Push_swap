@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/16 10:36:22 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/16 10:50:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,28 +33,6 @@ typedef struct	s_stacks
 	t_stack	*stack_b;
 	t_instruction_list	*instructions;
 }	t_stacks;
-
-typedef enum	e_loc
-{
-	TOP_A,
-	BOTTOM_A,
-	TOP_B,
-	BOTTOM_B
-}	t_loc;
-
-typedef struct s_partition
-{
-	t_loc 	loc;
-	int		start;
-	int		end;
-}	t_partition;
-
-typedef struct s_target_part
-{
-	t_partition	min;
-	t_partition	mid;
-	t_partition	max;
-}	t_target_part;
 
 // stack init functions
 void	rank_stack(t_stack **stack); // tbd
