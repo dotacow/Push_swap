@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/16 09:38:54 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/20 13:23:08 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@
 // keep splitting the partitions until the partitions are sorted
 //-------------------
 // tbd:
+// incorporate ft_strlen into error checking
+// the algorithim itself (:
+// exit function that writes on given fd and frees all malloc'd memory
 // is_empty()
 int	main(int argc, char **argv)
 {
@@ -32,7 +35,7 @@ int	main(int argc, char **argv)
 	stack_a = getlist(argc, argv);
 	stack_b = malloc(sizeof(t_stack *));
 	if (!stack_a || !stack_b)
-		return (free(stack_b), write(2, "Error\n", 6));
+		ft_perror("Error\n", 2, stack_a, stack_b);
 	*stack_b = NULL;
 	ft_sort(stack_a, stack_b);
 	if (*stack_a)

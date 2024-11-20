@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:33:57 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/15 11:00:52 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/20 12:12:02 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ int	find_max(t_stack *stack)
 	return (max);
 }
 
-// returns index of given num in stack
 int	find_index(t_stack *stack, int num)
+// returns index of given num in stack
 {
 	int	index;
 
@@ -56,4 +56,8 @@ int	find_index(t_stack *stack, int num)
 	}
 	return (-1);
 }
-void	node_cost(t_stack *stack);
+int	find_median(t_stack *stack)
+//returns if the node's rank is the median within a certain range
+{
+	
+}

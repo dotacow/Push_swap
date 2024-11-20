@@ -6,14 +6,14 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:23:19 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/16 09:54:03 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/20 13:23:28 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
+void	ft_sort_three(t_stack **stack_a)
 // hardcoded 3 cases sorter
- void	ft_sort_three(t_stack **stack_a)
 {
 	int	first;
 	int	second;
@@ -51,14 +51,6 @@ void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 	else if (ft_ilstsize(*stack_a) == 3)
 		ft_sort_three(stack_a);
 	else
-	{
-		while (ft_ilstsize(*stack_a) > 0)
-		{
-			while ((*stack_a)->num != find_min(*stack_a))
-				ft_ra(stack_a);
-			ft_pb(stack_a, stack_b);
-		}
-		while (ft_ilstsize(*stack_b) > 0)
-			ft_pa(stack_a, stack_b);
-	}
+		big_sort(*stack_a, *stack_b);
+
 }

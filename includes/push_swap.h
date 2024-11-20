@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/16 11:13:33 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/20 13:27:38 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,19 +50,22 @@ t_stack	*ft_ilstlast(t_stack **lst);
 int		find_index(t_stack *stack, int num);
 int		find_max(t_stack *stack);
 int		find_min(t_stack *stack);
+int		find_median(t_stack *stack);
 // stack specific functions
 int		ft_ilstsize(t_stack *stack);
 void	ft_ilstprint(t_stack *stack);
-// list instructions
-	//tbd
+// partition functions
 // checks
 int		is_sorted(t_stack *stack);
 int		is_empty(t_stack *stack);//tbd
+int		is_median(t_stack *stack, int median);
 // algorithim
 void	ft_sort(t_stack **stack_a, t_stack **stack_b);
- void	ft_sort_three(t_stack **stack_a);
+void	ft_sort_three(t_stack **stack_a);
+void	big_sort(t_stack *stack_a, t_stack *stack_b);
+void	rotate_to_top(t_stack **stack, int index);
 // exit functions
-void	ft_perror(char *str, t_stack **stack_a, t_stack **stack_b);
+void	ft_perror(char *str, int fd, ...);
 void	ft_free(char **words);
 void	ft_dlstclear(t_stack **lst);
 
