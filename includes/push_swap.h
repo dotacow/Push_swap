@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/20 13:27:38 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:01:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ void	ft_ilstprint(t_stack *stack);
 // partition functions
 // checks
 int		is_sorted(t_stack *stack);
-int		is_empty(t_stack *stack);//tbd
 int		is_median(t_stack *stack, int median);
 // algorithim
 void	ft_sort(t_stack **stack_a, t_stack **stack_b);

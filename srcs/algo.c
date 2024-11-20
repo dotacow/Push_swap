@@ -6,7 +6,7 @@
 /*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 11:01:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/20 13:27:30 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/11/20 13:52:55 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,4 @@ void	rotate_to_top(t_stack **stack, int index)
 		while (index--)
 			ft_rra(stack);
 	}
-}
+}	
