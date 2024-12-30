@@ -6,7 +6,7 @@ LIB = $(LIBDIR)/libft.a
 INSTRUCTIONS = ft_swap.c ft_push.c ft_rotate.c ft_rrotate.c
 INSTRUCTIONS := $(addprefix instructions/,$(INSTRUCTIONS))
 
-SRC = push_swap.c algo.c checks.c exit_helpers.c ft_sort.c getlist.c node_helpers.c stack_helpers.c stack_init.c $(INSTRUCTIONS)
+SRC = main.c exit_helpers.c ft_sort.c big_sort.c getlist.c node_helpers.c stack_helpers.c $(INSTRUCTIONS)
 
 SRCS =  $(addprefix srcs/,$(SRC))
 
