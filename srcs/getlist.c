@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   getlist.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/11/16 08:19:05 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/30 18:41:12 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,6 @@ static char	*strjoin(int size, char **strs, char *sep)
 // this function combines split and strjoin to parse the input string
 // after parsing,
 //we get a 2d array of strings which is used to create the linked list
-
 static char	**parsestr(int size, char **argv)
 {
 	char	*joined;

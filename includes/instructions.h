@@ -3,39 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   instructions.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42.fr>          +#+  +:+       +#+        */
+/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 14:05:54 by yokitane          #+#    #+#             */
-/*   Updated: 2024/11/20 13:05:50 by yokitane         ###   ########.fr       */
+/*   Updated: 2024/12/30 18:41:53 by yokitane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INSTRUCTIONS_H
 # define INSTRUCTIONS_H
-
-typedef struct s_stack	t_stack;
-
-typedef enum e_instructions
-{
-	NULLOP,
-	RA,
-	RB,
-	RR,
-	PA,
-	PB,
-	RRA,
-	RRB,
-	RRR,
-	SA,
-	SB,
-	SS
-}	t_instructions;
-
-typedef struct s_instruction_list
-{
-	t_instructions			instruction;
-	struct s_instruction_list	*next;
-}	t_instruction_list;
 
 void	ft_ra(t_stack **stack_a);
 void	ft_rb(t_stack **stack_b);
