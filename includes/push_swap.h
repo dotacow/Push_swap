@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/30 18:11:52 by yokitane         ###   ########.fr       */
+/*   Updated: 2025/01/01 15:33:48 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
-# include "instructions.h"
+
 
 // index is current index
 // rank is target index
@@ -36,6 +36,7 @@ int		ft_ilstsize(t_stack *stack);
 void	ft_ilstprint(t_stack *stack);
 // node functions (node_helpers.c)
 int		find_index(t_stack *stack, int num);
+t_stack	*find_min(t_stack *stack);
 // checks
 int		is_sorted(t_stack *stack);
 // algorithim
@@ -45,5 +46,18 @@ void	big_sort(t_stack **stack_a, t_stack **stack_b);
 void	ft_perror(char *str, t_stack **stack_a, t_stack **stack_b);
 void	ft_free(char **words);
 void	ft_dlstclear(t_stack **lst);
+// instructions
+void	ft_ra(t_stack **stack_a);
+void	ft_rb(t_stack **stack_b);
+void	ft_rr(t_stack **stack_a, t_stack **stack_b);
+void	ft_pa(t_stack **stack_a, t_stack **stack_b);
+void	ft_pb(t_stack **stack_a, t_stack **stack_b);
+void	ft_rra(t_stack **stack_a);
+void	ft_rrb(t_stack **stack_b);
+void	ft_rrr(t_stack **stack_a, t_stack **stack_b);
+void	ft_sa(t_stack **stack_a);
+void	ft_sb(t_stack **stack_b);
+void	ft_ss(t_stack **stack_a, t_stack **stack_b);
+
 
 #endif

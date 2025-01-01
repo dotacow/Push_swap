@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   getlist.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2024/12/30 18:41:12 by yokitane         ###   ########.fr       */
+/*   Updated: 2025/01/01 15:19:59 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,7 +136,6 @@ t_stack	**getlist(int argc, char **argv)
 		ft_ilstadd_back(head, temp);
 		i++;
 	}
-	rank_stack(head);
 	ft_free(strs);
 	return (head);
 }

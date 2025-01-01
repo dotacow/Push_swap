@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node_helpers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:33:57 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/30 15:35:45 by yokitane         ###   ########.fr       */
+/*   Updated: 2025/01/01 15:20:49 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,20 @@ int	find_index(t_stack *stack, int num)
 		index++;
 	}
 	return (-1);
+}
+// returns the node with the smallest num
+t_stack	*find_min(t_stack *stack)
+{
+	t_stack	*min;
+	t_stack	*tmp;
+
+	min = stack;
+	tmp = stack;
+	while (tmp)
+	{
+		if (tmp->num < min->num)
+			min = tmp;
+		tmp = tmp->next;
+	}
+	return (min);
 }
