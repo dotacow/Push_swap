@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2025/01/01 15:33:48 by dotacow          ###   ########.fr       */
+/*   Updated: 2025/01/01 16:00:43 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_stack	*find_min(t_stack *stack);
 // checks
 int		is_sorted(t_stack *stack);
 // algorithim
+void	ft_sort_three(t_stack **stack_a);
 void	ft_sort(t_stack **stack_a, t_stack **stack_b);
 void	big_sort(t_stack **stack_a, t_stack **stack_b);
 // exit functions
