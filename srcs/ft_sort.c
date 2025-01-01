@@ -6,14 +6,14 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/01 12:23:19 by yokitane          #+#    #+#             */
-/*   Updated: 2025/01/01 16:00:39 by dotacow          ###   ########.fr       */
+/*   Updated: 2025/01/01 18:07:49 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_sort_three(t_stack **stack_a)
 // hardcoded 3 cases sorter
+void	ft_sort_three(t_stack **stack_a)
 {
 	int	first;
 	int	second;
@@ -44,7 +44,7 @@ void	ft_sort_three(t_stack **stack_a)
 
 static void	ft_sort_four(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *min;
+	t_stack	*min;
 
 	while (ft_ilstsize(*stack_a) > 3)
 	{
@@ -69,9 +69,11 @@ static void	ft_sort_four(t_stack **stack_a, t_stack **stack_b)
 	while (ft_ilstsize(*stack_b) > 0)
 		ft_pa(stack_a, stack_b);
 }
-static void ft_sort_five(t_stack **stack_a, t_stack **stack_b)
+
+static void	ft_sort_five(t_stack **stack_a, t_stack **stack_b)
 {
-	int min;
+	int	min;
+
 	min = find_min(*stack_a)->num;
 	while ((*stack_a)->num != min)
 	{
@@ -109,4 +111,12 @@ void	ft_sort(t_stack **stack_a, t_stack **stack_b)
 		ft_sort_five(stack_a, stack_b);
 	else
 		big_sort(stack_a, stack_b);
+}
+
+void	big_sort(t_stack **stack_a, t_stack **stack_b)
+{
+	if (!stack_a || !*stack_a || ft_ilstsize(*stack_a) <= 1)
+		return ;
+	normalize_stack(stack_a);
+	radix_sort(stack_a, stack_b);
 }

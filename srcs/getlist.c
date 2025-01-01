@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 12:12:29 by dotacow           #+#    #+#             */
-/*   Updated: 2025/01/01 15:19:59 by dotacow          ###   ########.fr       */
+/*   Updated: 2025/01/01 17:56:35 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ static char	*strjoin(int size, char **strs, char *sep)
 	}
 	return (s[k] = 0, s);
 }
+
 // this function combines split and strjoin to parse the input string
 // after parsing,
 //we get a 2d array of strings which is used to create the linked list

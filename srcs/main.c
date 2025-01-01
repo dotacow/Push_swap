@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/12 17:33:46 by yokitane          #+#    #+#             */
-/*   Updated: 2025/01/01 15:35:14 by dotacow          ###   ########.fr       */
+/*   Updated: 2025/01/01 17:38:52 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int	main(int argc, char **argv)
 		ft_dlstclear(stack_a);
 	if (*stack_b)
 		ft_dlstclear(stack_b);
+	free(stack_b);
 	return (0);
 }

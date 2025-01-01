@@ -3,23 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   stack_helpers.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: yokitane <yokitane@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 17:52:03 by yokitane          #+#    #+#             */
-/*   Updated: 2024/12/30 15:57:44 by yokitane         ###   ########.fr       */
+/*   Updated: 2025/01/01 17:48:08 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-void	ft_ilstprint(t_stack *lst)
-{
-	while (lst)
-	{
-		ft_printf("%d\n", lst->num);
-		lst = lst->next;
-	}
-}
 
 int	ft_ilstsize(t_stack *lst)
 {
@@ -47,6 +38,7 @@ int	is_sorted(t_stack *lst)
 	}
 	return (1);
 }
+
 void	ft_ilstadd_back(t_stack **lst, t_stack *new)
 {
 	t_stack	*last;

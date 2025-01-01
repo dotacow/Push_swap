@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/20 10:41:27 by dotacow           #+#    #+#             */
-/*   Updated: 2025/01/01 16:30:36 by dotacow          ###   ########.fr       */
+/*   Updated: 2025/01/01 18:07:53 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,16 @@
 
 # include "../libft/libft.h"
 
-
 // index is current index
 // rank is target index
 // cost is current calculated cost to get into optimal position
-typedef struct	s_stack
+typedef struct s_stack
 {
-	long		num;
+	long			num;
+	int				rank;
 	struct s_stack	*next;
 	struct s_stack	*prev;
 }	t_stack;
-
 
 // stack functions
 void	ft_ilstadd_back(t_stack **stack, t_stack *new);
@@ -33,7 +32,6 @@ t_stack	*ft_ilstnew(int content);
 t_stack	**getlist(int argc, char **argv);
 t_stack	*ft_ilstlast(t_stack **lst);
 int		ft_ilstsize(t_stack *stack);
-void	ft_ilstprint(t_stack *stack);
 // node functions (node_helpers.c)
 int		find_index(t_stack *stack, int num);
 t_stack	*find_min(t_stack *stack);
@@ -41,8 +39,11 @@ t_stack	*find_min(t_stack *stack);
 int		is_sorted(t_stack *stack);
 // algorithim
 void	ft_sort_three(t_stack **stack_a);
+void	radix_sort(t_stack **stack_a, t_stack **stack_b);
 void	ft_sort(t_stack **stack_a, t_stack **stack_b);
 void	big_sort(t_stack **stack_a, t_stack **stack_b);
+void	normalize_stack(t_stack **stack);
+void	ft_rank(int *arr, int low, int high);
 // exit functions
 void	ft_perror(char *str, t_stack **stack_a, t_stack **stack_b);
 void	ft_free(char **words);
@@ -59,6 +60,5 @@ void	ft_rrr(t_stack **stack_a, t_stack **stack_b);
 void	ft_sa(t_stack **stack_a);
 void	ft_sb(t_stack **stack_b);
 void	ft_ss(t_stack **stack_a, t_stack **stack_b);
-
 
 #endif

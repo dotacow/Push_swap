@@ -6,7 +6,7 @@
 /*   By: dotacow <dotacow@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 13:33:57 by yokitane          #+#    #+#             */
-/*   Updated: 2025/01/01 15:20:49 by dotacow          ###   ########.fr       */
+/*   Updated: 2025/01/01 17:56:06 by dotacow          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	find_index(t_stack *stack, int num)
 	}
 	return (-1);
 }
+
 // returns the node with the smallest num
 t_stack	*find_min(t_stack *stack)
 {
